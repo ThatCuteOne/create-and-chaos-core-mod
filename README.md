@@ -26,7 +26,3 @@ environment and will have build number metadata.
 
 ## Help
 Questions? Join us in the #devchat channel of the [Create Discord](https://discord.com/invite/hmaD7Se).
-
-## License
-
-This template is available under the CC0 license. Feel free to do as you wish with it.
