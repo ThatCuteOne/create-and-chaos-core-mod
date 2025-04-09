@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "createaddition:electrum_ingot"
+    }
+  ],
+  "results": [
+    {
+      "item": "createaddition:electrum_sheet"
+    }
+  ]
+}

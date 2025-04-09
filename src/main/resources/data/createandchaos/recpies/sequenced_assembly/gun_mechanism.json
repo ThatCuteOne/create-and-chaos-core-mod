@@ -1,0 +1,66 @@
+{
+    "type": "create:sequenced_assembly",
+    "ingredient": {
+      "tag": "create:precision_mechanism"
+    },
+    "loops": 1,
+    "results": [
+      {
+        "item": "createandchaos:gun_mechanism"
+      }
+    ],
+    "sequence": [
+      {
+        "type": "create:deploying",
+        "ingredients": [
+          {
+            "item": "createandchaos:incomplete_gun_mechanism"
+          },
+          [
+            {
+              "item": "anim_guns:hardened_iron_ingot"
+            }
+          ]
+        ],
+        "results": [
+          {
+            "item": "createandchaos:incomplete_gun_mechanism"
+          }
+        ]
+      },
+      {
+        "type": "create:deploying",
+        "ingredients": [
+          {
+            "item": "createandchaos:incomplete_gun_mechanism"
+          },
+          [
+            {
+              "item": "anim_guns:hardened_iron_ingot"
+            }
+          ]
+        ],
+        "results": [
+          {
+            "item": "createandchaos:incomplete_gun_mechanism"
+          }
+        ]
+      },
+      {
+        "type": "create:deploying",
+        "ingredients": [
+          {
+            "item": "anim_guns:plastic"
+          }
+        ],
+        "results": [
+          {
+            "item": "createandchaos:incomplete_gun_mechanism"
+          }
+        ]
+      }
+    ],
+    "transitionalItem": {
+      "item": "createandchaos:incomplete_gun_mechanism"
+    }
+  }

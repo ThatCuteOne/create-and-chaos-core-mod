@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "bis",
+    "fmg"
+  ],
+  "key": {
+    "b": {
+      "item": "anim_guns:long_barrel"
+    },
+    "f": {
+      "item": "anim_guns:modern_handguard"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "g": {
+      "item": "anim_guns:pistol_grip"
+    },
+    "s": {
+      "item": "anim_guns:modern_stock"
+    },
+    "m": {
+      "item": "anim_guns:tube_magazine"
+    }
+  },
+  "result": {
+    "item": "anim_guns:shotgun_combat"
+  }
+}

@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "createandchaos",
+	"version": "${version}",
+	"name": "Create And Chaos",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"ThatCuteOne",
+		"rubl"
+	],
+	"contact": {
+		"homepage": "https://discord.gg/ErtF2jJWQN",
+		"sources": "https://github.com/ThatCuteOne/Create-and-Chaos"
+	},
+	"license": "CC-BY-4.0",
+	"icon": "assets/createandchaos/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"de.that_cute_one.createandchaos.CreateAndChaos"
+		],
+		"fabric-datagen": [
+			"de.that_cute_one.createandchaos.CreateAndChaosDataGenerator"
+		],
+		"client": [
+			"de.that_cute_one.createandchaos.CreateAndChaosClient"
+		]
+	},
+	"mixins": [
+
+	],
+	"depends": {
+		"fabricloader": ">=0.16.1",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"create": "*",
+		"animated_guns": "*",
+		"createdieselgenerators": "*"
+	},
+	"suggests": {}
+}

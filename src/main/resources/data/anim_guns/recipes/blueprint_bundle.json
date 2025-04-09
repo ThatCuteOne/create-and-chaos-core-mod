@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " p ",
+    "dpd",
+    " p "
+  ],
+  "key": {
+    "d": {
+      "item": "minecraft:air"
+    },
+    "p": {
+      "item": "minecraft:air"
+    }
+  },
+  "result": {
+    "item": "anim_guns:blueprint_bundle"
+  }
+}

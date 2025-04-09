@@ -1,0 +1,18 @@
+{
+    "type": "create:mixing",
+    "heatRequirement": "superheated",
+    "ingredients": [
+      {
+        "item": "createaddition:electrum_ingot"
+      },
+      {
+        "fluid": "createandchaos:naphtha",
+        "amount": 81000
+      }
+    ],
+    "results": [
+      {
+        "item": "anim_guns:plastic"
+      }
+    ]
+  }

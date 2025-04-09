@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "bis",
+    "fm "
+  ],
+  "key": {
+    "b": {
+      "item": "anim_guns:long_barrel"
+    },
+    "f": {
+      "item": "anim_guns:wooden_handguard"
+    },
+    "i": {
+      "item": "anim_guns:hardened_iron_ingot"
+    },
+    "s": {
+      "item": "anim_guns:wooden_stock"
+    },
+    "m": {
+      "item": "anim_guns:tube_magazine"
+    }
+  },
+  "result": {
+    "item": "anim_guns:sniper_cowboy"
+  }
+}
