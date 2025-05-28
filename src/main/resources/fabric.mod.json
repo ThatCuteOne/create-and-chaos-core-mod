@@ -3,7 +3,7 @@
 	"id": "createandchaos",
 	"version": "${version}",
 	"name": "Create And Chaos",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Adds a few items and recipes for the create and chaos modpack",
 	"authors": [
 		"ThatCuteOne",
 		"rubl"

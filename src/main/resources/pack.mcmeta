@@ -1,0 +1,14 @@
+{
+    "pack": {
+        "pack_format": 15,
+        "description": "Create and chaos resources"
+    },
+    "filter": {
+        "block": [
+            {
+                "namespace": "createaddition",
+                "path": "recipes/mixing/electrum"
+            }
+        ]
+    }
+}
