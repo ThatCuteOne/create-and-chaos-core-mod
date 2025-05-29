@@ -12,13 +12,13 @@ String buildNumber = System.getenv("GITHUB_RUN_NUMBER")
 version = "$mod_version+$minecraft_version" + (buildNumber != null ? "-build.$buildNumber" : "")
 
 repositories {
+	maven {url ="https://mvnrepository.com/artifact/net.fabricmc/yarn"}
 	maven { url = "https://maven.parchmentmc.org" } // Parchment mappings
 	maven { url = "https://mvn.devos.one/releases" } // Porting Lib releases
 	maven { url = "https://mvn.devos.one/snapshots" } // Create and several dependencies
 	maven { url = "https://maven.tterrag.com/" } // Flywheel
 	maven { url = "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
 	maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven" } // Forge Config API Port
-	maven {url 'https://maven.azuredoom.com/mods'} // Azure lib
 	maven { // Fabric ASM for Porting Lib
 		url = "https://jitpack.io/"
 		content { includeGroupAndSubgroups("com.github") }
@@ -26,7 +26,7 @@ repositories {
 
 	maven { url = "https://maven.shedaniel.me" } // Cloth Config, REI
 	maven { url = "https://maven.blamejared.com" } // JEI
-
+	maven {url 'https://maven.azuredoom.com/mods'} // Azure lib
 	maven { url = "https://maven.terraformersmc.com/releases" } // Mod Menu, EMI
 }
 
@@ -42,15 +42,18 @@ dependencies {
 	minecraft("com.mojang:minecraft:$minecraft_version")
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation("net.fabricmc:fabric-loader:$fabric_loader_version")
+	// Anim guns
+	modImplementation files("run/libs/animated_guns-1.3.jar")
+	modImplementation "mod.azure.azurelib:azurelib-fabric-$minecraft_version:$azure_lib_version"
 
 	// dependencies
 	modImplementation("net.fabricmc.fabric-api:fabric-api:$fabric_api_version")
-	// Azure lib
-	modImplementation "mod.azure.azurelib:azurelib-fabric-$minecraft_version:$azure_lib_version"
 
 	// Create - dependencies are added transitively
 	modImplementation("com.simibubi.create:create-fabric-$minecraft_version:$create_version")
 
+	include(implementation(annotationProcessor("com.github.llamalad7.mixinextras:mixinextras-fabric:0.2.0-beta.9")))
+	include implementation("com.github.Chocohead:Fabric-ASM:v2.3")
 	// Development QOL
 	modLocalRuntime("com.terraformersmc:modmenu:$modmenu_version")
 
