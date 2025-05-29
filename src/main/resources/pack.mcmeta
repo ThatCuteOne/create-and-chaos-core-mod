@@ -6,8 +6,8 @@
     "filter": {
         "block": [
             {
-                "namespace": "createaddition",
-                "path": "recipes/mixing/electrum"
+                "namespace": "anim_guns",
+                "path": "recipes/.*"
             }
         ]
     }

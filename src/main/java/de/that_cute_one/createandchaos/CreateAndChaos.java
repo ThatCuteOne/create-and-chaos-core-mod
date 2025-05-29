@@ -2,14 +2,14 @@ package de.that_cute_one.createandchaos;
 
 import net.fabricmc.api.ModInitializer;
 
-import de.that_cute_one.createandchaos.ModItems;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -37,9 +37,10 @@ public class CreateAndChaos implements ModInitializer {
 		// Proceed with mild caution.
 		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_pistol_light"), ModItems.INCOMPLETE_PISTOL_LIGHT);
 		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_pistol_heavy"), ModItems.INCOMPLETE_PISTOL_HEAVY);
+		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_pistol_service"), ModItems.INCOMPLETE_PISTOL_SERVICE);
 		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_revolver_magnum"), ModItems.INCOMPLETE_REVOLVER_MAGNUM);
 		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_revolver_coltarmy"), ModItems.INCOMPLETE_REVOLVER_COLTARMY);
-		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_smg_machine_pistol"), ModItems.INCOMPLETE_SMG_MACHINE_PISTOL);
+		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_smg_machinepistol"), ModItems.INCOMPLETE_SMG_MACHINEPISTOL);
 		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_smg_heavy"), ModItems.INCOMPLETE_SMG_HEAVY);
 		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_smg_rapid"), ModItems.INCOMPLETE_SMG_RAPID);
 		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_assaultrifle_light"), ModItems.INCOMPLETE_ASSAULTRIFLE_LIGHT);
@@ -51,12 +52,18 @@ public class CreateAndChaos implements ModInitializer {
 		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_sniper_classic"), ModItems.INCOMPLETE_SNIPER_CLASSIC);
 		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_sniper_cowboy"), ModItems.INCOMPLETE_SNIPER_COWBOY);
 		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_sniper_marksman"), ModItems.INCOMPLETE_SNIPER_MARKSMAN);
+		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_sniper_arctic"), ModItems.INCOMPLETE_SNIPER_ARCTIC);
+		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_sniper_dragunov"), ModItems.INCOMPLETE_SNIPER_DRAGUNOV);
+		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_minigun"), ModItems.INCOMPLETE_MINIGUN);
 		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_lmg_m60"), ModItems.INCOMPLETE_LMG_M60);
 		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_amr_classic"), ModItems.INCOMPLETE_AMR_CLASSIC);
 
 
 		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "incomplete_gun_mechanism"), ModItems.INCOMPLETE_GUN_MECHANISM);
 		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "gun_mechanism"), ModItems.GUN_MECHANISM);
+			ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content -> {
+				content.add(ModItems.GUN_MECHANISM);
+			});
 		STILL_NAPHTHA = Registry.register(Registries.FLUID, new Identifier(MOD_ID, "naphtha"), new NaphthaFluid.Still());
 		FLOWING_NAPHTHA = Registry.register(Registries.FLUID, new Identifier(MOD_ID, "flowing_naphtha"), new NaphthaFluid.Flowing());
 		NAPHTHA_BUCKET = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "naphtha_bucket"),
